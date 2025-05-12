@@ -1,0 +1,32 @@
+
+.chart{
+  text-align:center;
+  padding:40px;
+}
+.chart1{
+  padding: 40px;
+  margin-left:400px;
+  border:1px solid black;
+  border-radius: 5;
+  width:600px;
+}
+.chart2{
+  height:400px;
+  width:700px;
+  padding:20px;
+  border:1px solid black;
+  margin-top:50px;
+}
+.chart3{
+  height:400px;
+  width:300px;
+  padding:60px;
+  border:1px solid black;
+  margin-top:50px;
+  
+}
+.b{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap:80px;
+}
