@@ -2,53 +2,54 @@
   "name": "myfirstreact",
   "version": "0.1.0",
   "private": true,
-
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.2",
     "react-scripts": "5.0.1",
     "web-vitals": "^3.3.1",
-
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/user-event": "^14.4.3",
-
     "chart.js": "^4.4.7",
     "react-chartjs-2": "^5.3.0",
     "picocolors": "^1.1.1"
   },
-
   "devDependencies": {
     "ajv": "^8.0.0",
     "gh-pages": "^6.3.0",
     "@testing-library/react": "^14.0.0"
   },
-
   "scripts": {
-  "start": "react-scripts start",
-  "build": "npx react-scripts build",
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d build",
-  "test": "react-scripts test",
-  "eject": "react-scripts eject"
-},
-
-
-  "eslintConfig": {
-    "extends": ["react-app", "react-app/jest"]
+    "start": "react-scripts start",
+    "prebuild": "chmod +x node_modules/.bin/react-scripts || true",
+    "build": "node node_modules/react-scripts/bin/react-scripts.js build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
   "browserslist": {
-    "production": [">0.2%", "not dead", "not op_mini all"],
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
     ]
   },
-
   "overrides": {
-    "@testing-library/react": { "react": "$react" }
+    "@testing-library/react": {
+      "react": "$react"
+    }
   }
 }
-
